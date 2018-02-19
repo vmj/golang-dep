@@ -1,4 +1,4 @@
-FROM golang:1.9.4-stretch
+FROM golang:1.10.0-stretch
 
 COPY dep-*.sha256 .
 
