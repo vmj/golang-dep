@@ -1,5 +1,5 @@
-GOLANG?=1.9.4-stretch
-DEP?=0.4.1
+GOLANG?=1.10.3-stretch
+DEP?=0.5.0
 
 COMMIT_MSG?="Updated for $(GOLANG) and $(DEP)"
 
@@ -9,7 +9,7 @@ help:
 	@echo "  update: Update Dockerfile and README.adoc with those versions"
 	@echo "  build:  Locally build a container image"
 	@echo "  commit: git commit the changes (COMMIT_MSG=$(COMMIT_MSG))"
-	@echo "  tag:    git tag the HEAD as $(GOLANG)-$(DEP)"
+	@echo "  tag:    git tag the HEAD as $(GOLANG)-$(DEP) and push"
 
 pull:
 	docker pull golang:$(GOLANG)
@@ -31,8 +31,8 @@ build:
 	docker build -t vmj0/golang-dep:latest .
 
 commit:
-	git add Dockerfile README.adoc dep-linux-amd64.sha256
-	git commit -m "$(COMMIT_MSG)"
+	git add Makefile Dockerfile README.adoc dep-linux-amd64.sha256
+	git commit -m $(COMMIT_MSG)
 	git push origin master
 
 tag:

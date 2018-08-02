@@ -1,13 +1,13 @@
 # Go with Dep preinstalled
 
-Base image is `golang:1.10.2-stretch` and `dep v0.4.1` is installed into `$GOPATH/bin`,
+Base image is `golang:1.10.3-stretch` and `dep v0.5.0` is installed into `$GOPATH/bin`,
 so `dep` command is available in `$PATH`.
 
 ## Example usage
 
 Say you've got a program called `foo`.  In your `Dockerfile`:
 
-    FROM vmj0/golang-dep:1.10.2-stretch-0.4.1 as build
+    FROM vmj0/golang-dep:1.10.3-stretch-0.5.0 as build
     # Build a static binary
     WORKDIR /go/src/github.com/user/foo
     COPY Gopkg.* *.go ./
