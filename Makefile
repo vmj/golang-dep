@@ -1,4 +1,4 @@
-GOLANG?=1.10.3-stretch
+GOLANG?=1.11.0-stretch
 DEP?=0.5.0
 
 COMMIT_MSG?="Updated for $(GOLANG) and $(DEP)"
