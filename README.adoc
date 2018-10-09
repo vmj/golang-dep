@@ -1,5 +1,7 @@
 # Go with Dep preinstalled
 
+NOTE: This is deprecated and I'm not going to maintain this for long.  I've switched to https://github.com/golang/go/wiki/Modules[Go 1.11 modules].
+
 Base image is `golang:1.11.0-stretch` and `dep v0.5.0` is installed into `$GOPATH/bin`,
 so `dep` command is available in `$PATH`.
 
