@@ -1,4 +1,4 @@
-GOLANG?=1.11.0-stretch
+GOLANG?=1.11.1-stretch
 DEP?=0.5.0
 
 COMMIT_MSG?="Updated for $(GOLANG) and $(DEP)"
@@ -32,7 +32,7 @@ build:
 
 commit:
 	git add Makefile Dockerfile README.adoc dep-linux-amd64.sha256
-	git commit -m $(COMMIT_MSG)
+	git commit -m "$(COMMIT_MSG)"
 	git push origin master
 
 tag:
